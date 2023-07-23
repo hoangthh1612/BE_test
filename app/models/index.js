@@ -59,6 +59,12 @@ db.cart.belongsTo(db.buyer,{
   foreignKey: "buyerId", as: "buyers"
 })
 db.buyer.hasMany(db.cart);
+// category-products
+db.product.belongsTo(db.category, {
+  foreignKey: "categoryId", as: 'categories'
+})
+db.category.hasMany(db.product);
+
 
 //
 db.feedback.belongsTo(db.buyer,{

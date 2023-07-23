@@ -23,6 +23,7 @@ const productRoute = require("./app/routes/product.route");
 const colorRoute = require("./app/routes/color.route");
 const sizeRoute = require("./app/routes/size.route");
 const productDetailRoute = require("./app/routes/product-detail.route");
+const categoryRoute = require("./app/routes/category.route");
 const Role = db.role;
 
 
@@ -43,6 +44,8 @@ app.use('/api/color', colorRoute);
 app.use('/api/size', sizeRoute);
 
 app.use('/api/product-detail', productDetailRoute);
+
+app.use('/api/category', categoryRoute);
 
 // routes
 require('./app/routes/auth.routes')(app);
